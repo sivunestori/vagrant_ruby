@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/work/real_work/vagrant_ruby","disabled":false},"vagrant-notify":{"id":"vagrant-notify","guestpath":"/tmp/vagrant-notify","hostpath":"/tmp/vagrant-notify/cad8ca2e-dd1f-4cd2-9624-49cb76280bdb","disabled":false}}}
