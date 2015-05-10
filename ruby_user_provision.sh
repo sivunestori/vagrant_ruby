@@ -42,6 +42,15 @@ for dotfile in $dotfiles; do
   echo '##############' >> "$HOME/.$dotfile"
 done
 
+# While vimrc is a dotfile, it cannot handle # as comment, so 
+# provision that by itself...
+cat .dotfiles/.vimrc > .vimrc
+
+##############
+# Base16 shell
+##############
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
 ########
 # Vundle
 ########
@@ -52,11 +61,10 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #############
 vim +PluginInstall +qall
 
-
 #################################
 # Preinstall some often used gems
 #################################
-cp /vagrant/Gemfile .
-bundle
-rm Gemfile
+# cp /vagrant/Gemfile .
+# bundle
+# rm Gemfile
 
