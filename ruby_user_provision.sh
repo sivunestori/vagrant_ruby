@@ -61,6 +61,15 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #############
 vim +PluginInstall +qall
 
+###################
+# Gcloud
+wget -q https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
+tar xzvpf google-cloud-sdk.tar.gz
+rm google-cloud-sdk.tar.gz
+echo ' * Installing Cloud SDK'
+./google-cloud-sdk/install.sh --usage-reporting=false --rc-path=/home/vagrant/.zsh --bash-completion=true --path-update=true
+
+
 #################################
 # Preinstall some often used gems
 #################################
