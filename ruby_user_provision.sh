@@ -61,13 +61,18 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #############
 vim +PluginInstall +qall
 
-###################
+########
 # Gcloud
+########
+cd /home/vagrant
 wget -q https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
 tar xzvpf google-cloud-sdk.tar.gz
 rm google-cloud-sdk.tar.gz
 echo ' * Installing Cloud SDK'
-./google-cloud-sdk/install.sh --usage-reporting=false --rc-path=/home/vagrant/.zsh --bash-completion=true --path-update=true
+# stuff that rc-path does do not work with zsh
+#./google-cloud-sdk/install.sh --usage-reporting=false --rc-path=/home/vagrant/.zshrc --bash-completion=true --path-update=true
+./google-cloud-sdk/install.sh --usage-reporting=false --bash-completion=false --path-update=false
+echo 'export PATH=/home/vagrant/google-cloud-sdk/bin:$PATH' >> ~/.zshrc
 
 
 #################################
