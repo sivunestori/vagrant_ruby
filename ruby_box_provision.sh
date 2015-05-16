@@ -21,7 +21,18 @@ ln -fs /usr/share/zoneinfo/UTC /etc/localtime
 ########################
 apt-get update
 apt-get -y dist-upgrade
-apt-get install -y curl git vim build-essential libfontconfig tmux zsh  bison openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev ssl-cert libffi-dev libncurses5-dev libgdbm3 libgdbm-dev python-dev libqt4-dev libqtwebkit-dev libpq-dev graphviz libgtk2.0-0 libgtkmm-3.0 libnotify-dev libreadline-dev wget ca-certificates geeqie unzip gitk
+apt-get install -y curl git vim build-essential libfontconfig zsh  bison openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev ssl-cert libffi-dev libncurses5-dev libgdbm3 libgdbm-dev python-dev libqt4-dev libqtwebkit-dev libpq-dev graphviz libgtk2.0-0 libgtkmm-3.0 libnotify-dev libreadline-dev wget ca-certificates geeqie unzip gitk libevent-dev
+
+######
+# tmux
+######
+mkdir src
+cd src
+wget http://downloads.sourceforge.net/tmux/tmux-2.0.tar.gz
+tar xvf tmux-2.0.tar.gz
+cd tmux-2.0
+./configure
+make && make install
 
 ########
 # Nodejs
