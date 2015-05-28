@@ -39,3 +39,23 @@ map <C-j> 3<C-w>+
 map <C-k> 3<C-w>-                                              
 map <leader><leader> :ZoomWin<cr>
 set t_Co=256
+
+" Strip trailing whitespace                                                                                                    
+function! <SID>StripTrailingWhitespaces()                                                                                      
+    " Preparation: save last search, and cursor position.                                                                      
+    let _s=@/                                                                                                                  
+    let l = line(".")                                                                                                          
+    let c = col(".")                                                                                                           
+    " Do the business:                                                                                                         
+    %s/\s\+$//e                                                                                                                
+    " Clean up: restore previous search history, and cursor position                                                           
+    let @/=_s                                                                                                                  
+    call cursor(l, c)                                                                                                          
+endfunction                                                                                                                    
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()                                                                    
+                                                                                                                               
+" show tabs                                                                                                                    
+set list                                                                                                                       
+set listchars=tab:>-,trail:~,extends:>,precedes:<                                                                              
+                                                                                                                               
+set number                                                                                                                     
