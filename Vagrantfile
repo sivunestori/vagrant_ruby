@@ -15,6 +15,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # debugging port
   config.vm.network "forwarded_port", guest: 5858, host: 5858, auto_correct: true
 
+  # private network
+  #config.vm.network "private_network", ip: "192.168.1.1"
+
   # virtualbox parameters
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048

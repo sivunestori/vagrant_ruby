@@ -49,6 +49,14 @@ apt-get update
 apt-get dist-upgrade -y
 apt-get install -y postgresql-9.4 postgresql-contrib-9.4
 
+##########
+# RabbitMQ
+##########
+sudo apt-get install erlang-nox
+wget "https://github.com/rabbitmq/rabbitmq-server/releases/download/rabbitmq_v3_5_3/rabbitmq-server_3.5.3-1_all.deb" -O rabbitmq-server.deb
+dpkg --install rabbitmq-server.deb
+rm rabbitmq-server.deb
+
 ################
 ## pip + thefuck
 ################
