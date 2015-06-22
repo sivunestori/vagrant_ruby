@@ -15,8 +15,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # debugging port
   config.vm.network "forwarded_port", guest: 5858, host: 5858, auto_correct: true
 
+  # rabbitmq management. http://lvh.me:15672/
+  config.vm.network "forwarded_port", guest: 15672, host: 15672, auto_correct: true
+
   # private network
-  #config.vm.network "private_network", ip: "192.168.1.1"
+  config.vm.network "private_network", ip: "192.168.1.3", virtualbox__intnet: true
 
   # virtualbox parameters
   config.vm.provider "virtualbox" do |v|
