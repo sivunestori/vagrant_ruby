@@ -43,7 +43,7 @@ done
 
 # While vimrc is a dotfile, it cannot handle # as comment, so 
 # provision that by itself...
-cat .dotfiles/.vimrc > .vimrc
+cat /vagrant/.dotfiles/.vimrc > $HOME/.vimrc
 
 ##############
 # Base16 shell
