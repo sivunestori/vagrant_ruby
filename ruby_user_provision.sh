@@ -41,7 +41,7 @@ for dotfile in $dotfiles; do
   echo '##############' >> "$HOME/.$dotfile"
 done
 
-# While vimrc is a dotfile, it cannot handle # as comment, so 
+# While vimrc is a dotfile, it cannot handle # as comment, so
 # provision that by itself...
 cat /vagrant/.dotfiles/.vimrc > $HOME/.vimrc
 
