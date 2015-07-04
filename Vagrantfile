@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Run first:
   # vagrant box add kraksoft/debian-7.8-netinst https://github.com/kraksoft/vagrant-box-debian/releases/download/7.8.0/debian-7.8.0-amd64.box
-  config.vm.box = "kraksoft/debian-7.8-netinst"
+  config.vm.box = "debian/jessie64"
   config.ssh.forward_x11 = true
 
   # grunt port

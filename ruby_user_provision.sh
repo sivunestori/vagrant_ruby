@@ -29,14 +29,13 @@ gem install bundler
 ##########
 # dotfiles
 ##########
-cp -r /vagrant/.dotfiles .
 dotfiles=('zshrc' 'gemrc' 'bash_aliases')
 # Hmm, reprovisioning will screw things up...
 for dotfile in $dotfiles; do
   echo '#############' >> "$HOME/.$dotfile"
   echo '# Provisioned' >> "$HOME/.$dotfile"
   echo '#############' >> "$HOME/.$dotfile"
-  cat .dotfiles/.$dotfile >> "$HOME/.$dotfile"
+  cat /vagrant/.dotfiles/.$dotfile >> "$HOME/.$dotfile"
   echo '##############' >> "$HOME/.$dotfile"
   echo '# /Provisioned' >> "$HOME/.$dotfile"
   echo '##############' >> "$HOME/.$dotfile"
