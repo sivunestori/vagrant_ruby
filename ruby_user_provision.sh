@@ -43,7 +43,7 @@ done
 
 # While vimrc is a dotfile, it cannot handle # as comment, so
 # provision that by itself...
-cat /vagrant/.dotfiles/.vimrc > $HOME/.vimrc
+cat '/vagrant/.dotfiles/.vimrc-1' > $HOME/.vimrc
 
 ##############
 # Base16 shell
@@ -52,8 +52,13 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 
 ########
 # Vundle
-########
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+###########################################################################
+
+##############################################################
+# base16 and togglebg refuse to install when defined initially
+##############################################################
+cat '/vagrant/.dotfiles/.vimrc-2' > $HOME/.vimrc
 
 #############
 # Vim plugins
