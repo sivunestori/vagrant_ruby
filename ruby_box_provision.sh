@@ -12,7 +12,7 @@
 # netselect-apt -n wheezy && sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak && sudo mv sources.list /etc/apt/
 
 ###########
-## Timezone
+# Timezone
 ###########
 ln -fs /usr/share/zoneinfo/UTC /etc/localtime
 
@@ -41,7 +41,7 @@ curl -sL https://deb.nodesource.com/setup | sudo bash -
 apt-get install -y nodejs
 
 ###############
-## Postgres 9.4
+# Postgres 9.4
 ###############
 echo 'deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
@@ -59,14 +59,14 @@ rabbitmq-plugins enable rabbitmq_management
 rm rabbitmq-server.deb
 
 ################
-## pip + thefuck
+# pip + thefuck
 ################
 curl "https://bootstrap.pypa.io/get-pip.py" | python
 pip install requests[security]
 pip install thefuck
 
 ###############
-## Locale UTF-8
+# Locale UTF-8
 ###############
 locale-gen en_US.UTF-8
 dpkg-reconfigure -f noninteractive locales
@@ -77,7 +77,7 @@ RACK_ENV=development
 EOF
 
 ###########################
-## Set zsh as default shell
+# Set zsh as default shell
 ###########################
 chsh -s /bin/zsh vagrant
 
