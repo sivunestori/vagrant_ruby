@@ -29,7 +29,7 @@ gem install bundler
 ##########
 # dotfiles
 ##########
-dotfiles=('zshrc' 'gemrc' 'bash_aliases')
+dotfiles=('zshrc' 'gemrc' 'bash_aliases' 'tmux.conf')
 # Hmm, reprovisioning will screw things up...
 for dotfile in $dotfiles; do
   echo '#############' >> "$HOME/.$dotfile"
